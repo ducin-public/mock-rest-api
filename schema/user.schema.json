@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "faker": "name.firstName"
+    },
+    "lastName": {
+      "type": "string",
+      "faker": "name.firstName"
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 75
+    },
+    "email": {
+      "type": "string",
+      "faker": "internet.email"
+    },
+    "salary": {
+      "type": "number",
+      "faker": {
+        "random.number": {
+          "min": 1000,
+          "max": 10000,
+          "precision": 0.1
+        }
+      }
+    },
+    "addresses": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "properties": {
+          "street": {
+            "type": "string",
+            "faker": "address.streetAddress"
+          },
+          "city": {
+            "type": "string",
+            "faker": "address.city"
+          },
+          "country": {
+            "type": "string",
+            "faker": "address.country"
+          }
+        },
+        "required": [
+          "street",
+          "city",
+          "country"
+        ]
+      }
+    },
+    "bio": {
+      "type": "string",
+      "faker": {
+        "lorem.paragraphs": [3]
+      }
+    },
+    "expire": {
+      "faker": "date.recent"
+    }
+  },
+  "required": [
+    "firstName",
+    "lastName",
+    "age",
+    "salary",
+    "email",
+    "addresses",
+    "bio",
+    "expire"
+  ]
+}

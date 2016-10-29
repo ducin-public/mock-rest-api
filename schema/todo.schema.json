@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "faker": "random.uuid"
+    },
+    "title": {
+      "type": "string",
+      "faker": {
+        "fake": "{{company.catchPhrase}} {{commerce.product}}"
+      }
+    },
+    "completed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "id",
+    "title",
+    "completed"
+  ]
+}

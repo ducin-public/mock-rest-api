@@ -1,0 +1,28 @@
+{
+  "name": "mock-rest-api",
+  "version": "1.0.0",
+  "description": "mocked RESTful API used for SPAs development",
+  "main": "run.js",
+  "bin": "./bin/index.js",
+  "scripts": {
+    "start": "node ./bin/index.js",
+    "generate": "node generate.js"
+  },
+  "author": "Tomasz Ducin <tomasz@ducin.it>",
+  "license": "MIT",
+  "keywords": [
+    "mock",
+    "api",
+    "rest",
+    "test",
+    "spa"
+  ],
+  "devDependencies": {
+    "json-schema-faker": "^0.3.6"
+  },
+  "dependencies": {
+    "connect-pause": "^0.1.0",
+    "json-server": "^0.8.23",
+    "promise": "^7.1.1"
+  }
+}
