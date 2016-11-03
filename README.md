@@ -56,4 +56,6 @@ You can also adapt `generate.js` file where you define size of the collection, f
 ## software used
 
  * [`json-schema-faker`](https://github.com/json-schema-faker/json-schema-faker)
- * [`json-server`](https://github.com/typicode/json-server)
+ * [`json-server`](https://github.com/typicode/json-server), read more at:
+   * https://www.sitepoint.com/mock-rest-apis-using-json-server
+   * https://egghead.io/lessons/nodejs-creating-demo-apis-with-json-server

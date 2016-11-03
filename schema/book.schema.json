@@ -1,0 +1,37 @@
+{
+  "type": "object",
+  "properties": {
+    "author": {
+      "type": "string",
+      "faker": "name.findName"
+    },
+    "description": {
+      "type": "string",
+      "faker": {
+        "lorem.paragraphs": [2]
+      }
+    },
+    "press": {
+      "type": "string",
+      "faker": {
+        "fake": "{{company.catchPhraseNoun}} Press"
+      }
+    },
+    "barcode": {
+      "type": "string",
+      "faker": {
+        "fake": "{{random.number}}-{{random.number}}-{{random.number}}"
+      }
+    },
+    "borrowed": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "author",
+    "description",
+    "press",
+    "barcode",
+    "borrowed"
+  ]
+}
