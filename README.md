@@ -3,13 +3,25 @@
 This repository holds a simple mock REST API that might be used for rapid SPA development.
 Especially, when there's no need to focus on the API itself - this one comes for free :)
 
-## install
+## run
+
+install globally:
+
+    npm install -g mock-rest-api
+
+and execute:
+
+    mock-rest-api
+
+as simple as that
+
+## develop
+
+You can customize your `mock-rest-api`
 
 fetch dependencies:
 
     npm install
-
-## execute
 
 start REST API in your console:
 
