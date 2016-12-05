@@ -1,6 +1,42 @@
 {
   "type": "object",
   "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "bookTypeId": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "bookCategoryId": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "title": {
+      "oneOf": [
+        {
+          "type": "string",
+          "faker": {
+            "fake": "{{commerce.productName}}"
+          }
+        },
+        {
+          "type": "string",
+          "faker": {
+            "lorem.words": [3]
+          }
+        },
+        {
+          "type": "string",
+          "faker": {
+            "lorem.words": [5]
+          }
+        }
+      ]
+    },
     "author": {
       "type": "string",
       "faker": "name.findName"
@@ -28,6 +64,10 @@
     }
   },
   "required": [
+    "id",
+    "bookTypeId",
+    "bookCategoryId",
+    "title",
     "author",
     "description",
     "press",

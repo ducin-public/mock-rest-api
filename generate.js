@@ -28,7 +28,7 @@ function writeJSONPromise(filename, json){
 
 function appendIds(collection){
     var id = 0;
-    collection.forEach(item => item.id = id++);
+    collection.forEach(item => item.id = ++id);
     return collection;
 }
 
@@ -37,6 +37,9 @@ var generateCollection = (schema, count) => arrayGen(count).map(x => jsf(schema)
 
 var filePromises = [
     'data/config.json',
+    'data/departments.json',
+    'data/bookTypes.json',
+    'data/bookCategories.json',
     'schema/user.schema.json',
     'schema/book.schema.json',
     'schema/todo.schema.json'
@@ -49,9 +52,12 @@ Promise.all(filePromises)
 .then(fileContents => {
     return {
         config: fileContents[0],
-        users: appendIds(generateCollection(fileContents[1], 500)),
-        books: appendIds(generateCollection(fileContents[2], 300)),
-        todos: generateCollection(fileContents[3], 30)
+        departments: fileContents[1],
+        bookTypes: fileContents[2],
+        bookCategories: fileContents[3],
+        users: appendIds(generateCollection(fileContents[4], 500)),
+        books: appendIds(generateCollection(fileContents[5], 300)),
+        todos: generateCollection(fileContents[6], 30)
     };
 }).then(result => writeJSONPromise('db.json', result))
 .then(() => console.info("File saved successfully."))

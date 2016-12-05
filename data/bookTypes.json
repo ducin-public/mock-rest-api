@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "type": "paper book"
+  },
+  {
+    "id": 2,
+    "type": "ebook"
+  },
+  {
+    "id": 3,
+    "type": "audiobook"
+  }
+]

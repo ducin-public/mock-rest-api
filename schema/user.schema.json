@@ -1,6 +1,15 @@
 {
   "type": "object",
   "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "departmentId": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 6
+    },
     "firstName": {
       "type": "string",
       "faker": "name.firstName"
@@ -9,9 +18,13 @@
       "type": "string",
       "faker": "name.firstName"
     },
+    "title": {
+      "type": "string",
+      "faker": "name.jobTitle"
+    },
     "age": {
       "type": "integer",
-      "minimum": 10,
+      "minimum": 35,
       "maximum": 75
     },
     "email": {
@@ -61,18 +74,50 @@
         "lorem.paragraphs": [3]
       }
     },
-    "expire": {
-      "faker": "date.recent"
+    "hiredAt": {
+      "faker": {
+        "date.between": ["1990-01-01", "2012-12-29"]
+      }
+    },
+    "expiresAt": {
+      "oneOf": [
+        {
+          "faker": "date.future"
+        },
+        {
+          "faker": "date.recent"
+        },
+        {
+          "faker": "date.past"
+        }
+      ]
+    },
+    "retiresAt": {
+      "oneOf": [
+        {
+          "faker": "date.future"
+        },
+        {
+          "faker": "date.recent"
+        },
+        {
+          "faker": "date.past"
+        }
+      ]
     }
   },
   "required": [
+    "id",
+    "departmentId",
     "firstName",
     "lastName",
+    "title",
     "age",
     "salary",
     "email",
     "addresses",
     "bio",
-    "expire"
+    "hiredAt",
+    "expiresAt"
   ]
 }

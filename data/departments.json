@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "type": "Sales"
+  },
+  {
+    "id": 2,
+    "type": "IT"
+  },
+  {
+    "id": 3,
+    "type": "Human Resources"
+  },
+  {
+    "id": 4,
+    "type": "Marketing"
+  },
+  {
+    "id": 5,
+    "type": "Logistics"
+  },
+  {
+    "id": 6,
+    "type": "Customer Care"
+  }
+]

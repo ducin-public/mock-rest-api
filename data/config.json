@@ -1,5 +1,6 @@
 {
-  "name": "My Application",
+  "name": "HR Center",
+  "company": "Mega Business Ltd.",
   "language": "en",
-  "some": "data"
+  "version": "v1.2016.45.28.76"
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "type": "poetry"
+  },
+  {
+    "id": 2,
+    "type": "prose"
+  },
+  {
+    "id": 3,
+    "type": "reportage"
+  },
+  {
+    "id": 4,
+    "type": "autobiography"
+  },
+  {
+    "id": 5,
+    "type": "magazine"
+  },
+  {
+    "id": 6,
+    "type": "non-fiction"
+  }
+]

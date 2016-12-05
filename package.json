@@ -1,6 +1,6 @@
 {
   "name": "mock-rest-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mocked RESTful API used for SPAs development",
   "main": "run.js",
   "bin": "./bin/index.js",
@@ -18,7 +18,7 @@
     "spa"
   ],
   "devDependencies": {
-    "json-schema-faker": "^0.3.6"
+    "json-schema-faker": "^0.3.7"
   },
   "dependencies": {
     "connect-pause": "^0.1.0",
