@@ -5,15 +5,20 @@
       "type": "integer",
       "minimum": 1
     },
-    "bookTypeId": {
+    "bookFormId": {
       "type": "integer",
       "minimum": 1,
       "maximum": 3
     },
-    "bookCategoryId": {
+    "bookGenreId": {
       "type": "integer",
       "minimum": 1,
-      "maximum": 6
+      "maximum": 9
+    },
+    "bookTypeId": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
     },
     "title": {
       "oneOf": [
@@ -65,8 +70,9 @@
   },
   "required": [
     "id",
+    "bookFormId",
+    "bookGenreId",
     "bookTypeId",
-    "bookCategoryId",
     "title",
     "author",
     "description",

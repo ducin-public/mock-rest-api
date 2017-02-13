@@ -38,8 +38,9 @@ var generateCollection = (schema, count) => arrayGen(count).map(x => jsf(schema)
 var filePromises = [
     'data/config.json',
     'data/departments.json',
+    'data/bookForms.json',
+    'data/bookGenres.json',
     'data/bookTypes.json',
-    'data/bookCategories.json',
     'schema/user.schema.json',
     'schema/book.schema.json',
     'schema/todo.schema.json'
@@ -53,11 +54,12 @@ Promise.all(filePromises)
     return {
         config: fileContents[0],
         departments: fileContents[1],
-        bookTypes: fileContents[2],
-        bookCategories: fileContents[3],
-        users: appendIds(generateCollection(fileContents[4], 500)),
-        books: appendIds(generateCollection(fileContents[5], 300)),
-        todos: generateCollection(fileContents[6], 30)
+        bookForms: fileContents[2],
+        bookGenres: fileContents[3],
+        bookTypes: fileContents[4],
+        users: appendIds(generateCollection(fileContents[5], 500)),
+        books: appendIds(generateCollection(fileContents[6], 300)),
+        todos: generateCollection(fileContents[7], 30)
     };
 }).then(result => writeJSONPromise('db.json', result))
 .then(() => console.info("File saved successfully."))

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "type": "poetry"
+  },
+  {
+    "id": 2,
+    "type": "prose"
+  },
+  {
+    "id": 3,
+    "type": "drama"
+  }
+]

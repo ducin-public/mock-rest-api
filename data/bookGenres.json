@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "type": "novel"
+  },
+  {
+    "id": 2,
+    "type": "reportage"
+  },
+  {
+    "id": 3,
+    "type": "biography"
+  },
+  {
+    "id": 4,
+    "type": "interview"
+  },
+  {
+    "id": 5,
+    "type": "essay"
+  },
+  {
+    "id": 6,
+    "type": "autobiography"
+  },
+  {
+    "id": 7,
+    "type": "diaries"
+  },
+  {
+    "id": 8,
+    "type": "letters"
+  },
+  {
+    "id": 9,
+    "type": "feuilleton"
+  }
+]
