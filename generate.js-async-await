@@ -43,32 +43,26 @@ var filePromises = [
     'data/bookTypes.json',
     'schema/user.schema.json',
     'schema/book.schema.json',
-    'schema/todo.schema.json',
-    'schema/income.schema.json',
-    'schema/income-category.schema.json',
-    'schema/transfer.schema.json'
+    'schema/todo.schema.json'
 ].map(file => readJSONPromise(file))
 
 // in case single file read fails
 filePromises.forEach(p => p.catch(errInfo => console.error("Failed to read file: ", errInfo[1], errInfo[0])));
 
-Promise.all(filePromises)
-.then(fileContents => {
-    return {
-        config: fileContents[0],
-        departments: fileContents[1],
-        bookForms: fileContents[2],
-        bookGenres: fileContents[3],
-        bookTypes: fileContents[4],
-        users: appendIds(generateCollection(fileContents[5], 500)),
-        books: appendIds(generateCollection(fileContents[6], 300)),
-        todos: generateCollection(fileContents[7], 30),
-        incomes: appendIds(generateCollection(fileContents[8], 300)),
-        outcomes: appendIds(generateCollection(fileContents[8], 500)),
-        incomeCategories: appendIds(generateCollection(fileContents[9], 12)),
-        outcomeCategories: appendIds(generateCollection(fileContents[9], 24)),
-        transfers: generateCollection(fileContents[10], 300)
+async function generate(filePromises){
+    let database = {
+        config: await filePromises[0],
+        departments: await filePromises[1],
+        bookForms: await filePromises[2],
+        bookGenres: await filePromises[3],
+        bookTypes: await filePromises[4],
+        users: appendIds(generateCollection(await filePromises[5], 500)),
+        books: appendIds(generateCollection(await filePromises[6], 300)),
+        todos: generateCollection(await filePromises[7], 30)
     };
-}).then(result => writeJSONPromise('db.json', result))
+    return writeJSONPromise('db.json', database);
+}
+
+generate(filePromises)
 .then(() => console.info("File saved successfully."))
 .catch((err) => console.error("File save failed:", err));

@@ -19,5 +19,6 @@
     "id",
     "title",
     "completed"
-  ]
+  ],
+  "additionalProperties": false
 }

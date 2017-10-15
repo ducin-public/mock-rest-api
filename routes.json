@@ -1,0 +1,26 @@
+{
+  "/library/users": "/users",
+  "/library/users/:id": "/users/:id",
+  "/library/books": "/books",
+  "/library/books/:id": "/books/:id",
+  "/library/forms": "/bookForms",
+  "/library/forms/:id": "/forms/:id",
+  "/library/genres": "/bookGenres",
+  "/library/genres/:id": "/genres/:id",
+  "/library/types": "/bookTypes",
+  "/library/types/:id": "/types/:id",
+
+  "/finance/users": "/users",
+  "/finance/users/:id": "/users/:id",
+  "/finance/incomes": "/incomes",
+  "/finance/incomes/:id": "/incomes/:id",
+  "/finance/outcomes": "/outcomes",
+  "/finance/outcomes/:id": "/outcomes/:id",
+  "/finance/categories/incomes": "/incomeCategories",
+  "/finance/categories/incomes/:id": "/incomeCategories/:id",
+  "/finance/categories/outcomes": "/outcomeCategories",
+  "/finance/categories/outcomes/:id": "/outcomeCategories/:id",
+
+  "/bank/transfers": "/transfers",
+  "/bank/transfers/:id": "/transfers/:id"
+}

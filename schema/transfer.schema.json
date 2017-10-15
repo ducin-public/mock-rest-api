@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "faker": "random.uuid"
+    },
+    "amount": {
+      "type": "number",
+      "faker": "finance.amount"
+    },
+    "currency": {
+      "enum": ["PLN", "GBP", "USD", "EUR"]
+    },
+    "sourceAccount": {
+      "type": "string",
+      "faker": {
+        "finance.account": [26]
+      }
+    },
+    "recipientAccount": {
+      "type": "string",
+      "faker": {
+        "finance.account": [26]
+      }
+    },
+    "recipient": {
+      "type": "string",
+      "faker": "name.findName"
+    },
+    "title": {
+      "type": "string",
+      "faker": "lorem.sentence"
+    },
+    "scheduledAt": {
+      "faker": "date.past"
+    },
+    "executeAt": {
+      "faker": "date.future"
+    }
+  },
+  "required": [
+    "id",
+    "amount",
+    "currency",
+    "sourceAccount",
+    "recipientAccount",
+    "recipient",
+    "title",
+    "scheduledAt",
+    "executeAt"
+  ],
+  "additionalProperties": false
+}

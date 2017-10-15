@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "minimum": 1
+    },
+    "categoryId": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 20
+    },
+    "amount": {
+      "type": "number",
+      "faker": "finance.amount"
+    },
+    "description": {
+      "type": "string",
+      "faker": "company.bs"
+    },
+    "createdAt": {
+      "faker": "date.past"
+    },
+    "createdBy": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 10
+    }
+  },
+  "required": [
+    "id",
+    "categoryId",
+    "amount",
+    "description",
+    "createdAt",
+    "createdBy"
+  ],
+  "additionalProperties": false
+}
