@@ -1,6 +1,6 @@
 {
   "name": "mock-rest-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "mocked RESTful API used for SPAs development",
   "main": "run.js",
   "bin": "./bin/index.js",

@@ -65,8 +65,8 @@ Promise.all(filePromises)
         todos: generateCollection(fileContents[7], 30),
         incomes: appendIds(generateCollection(fileContents[8], 300)),
         outcomes: appendIds(generateCollection(fileContents[8], 500)),
-        incomeCategories: appendIds(generateCollection(fileContents[9], 12)),
-        outcomeCategories: appendIds(generateCollection(fileContents[9], 24)),
+        incomeCategories: appendIds(generateCollection(fileContents[9], 20)),
+        outcomeCategories: appendIds(generateCollection(fileContents[9], 20)),
         transfers: generateCollection(fileContents[10], 300)
     };
 }).then(result => writeJSONPromise('db.json', result))
