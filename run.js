@@ -28,6 +28,6 @@ module.exports = function run(opts){
 
   server.listen(opts.port, function () {
     console.log('JSON Server is running');
-    console.log('open http://localhost:3000');
+    console.log('open http://localhost:' + opts.port);
   });
 }
