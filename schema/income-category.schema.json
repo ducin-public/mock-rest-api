@@ -23,9 +23,11 @@
       "faker": "commerce.productAdjective"
     },
     "createdAt": {
+      "type": "string",
       "faker": "date.past"
     },
     "updatedAt": {
+      "type": "string",
       "faker": "date.past"
     }
   },

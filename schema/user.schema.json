@@ -46,26 +46,7 @@
       "minItems": 1,
       "maxItems": 3,
       "items": {
-        "type": "object",
-        "properties": {
-          "street": {
-            "type": "string",
-            "faker": "address.streetAddress"
-          },
-          "city": {
-            "type": "string",
-            "faker": "address.city"
-          },
-          "country": {
-            "type": "string",
-            "faker": "address.country"
-          }
-        },
-        "required": [
-          "street",
-          "city",
-          "country"
-        ]
+        "$ref": "#/definitions/Address"
       }
     },
     "bio": {
@@ -75,6 +56,7 @@
       }
     },
     "hiredAt": {
+      "type": "string",
       "faker": {
         "date.between": ["1990-01-01", "2012-12-29"]
       }
@@ -82,12 +64,15 @@
     "expiresAt": {
       "oneOf": [
         {
+          "type": "string",
           "faker": "date.future"
         },
         {
+          "type": "string",
           "faker": "date.recent"
         },
         {
+          "type": "string",
           "faker": "date.past"
         }
       ]
@@ -95,12 +80,15 @@
     "retiresAt": {
       "oneOf": [
         {
+          "type": "string",
           "faker": "date.future"
         },
         {
+          "type": "string",
           "faker": "date.recent"
         },
         {
+          "type": "string",
           "faker": "date.past"
         }
       ]
@@ -120,5 +108,30 @@
     "hiredAt",
     "expiresAt"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "Address": {
+      "type": "object",
+      "properties": {
+        "street": {
+          "type": "string",
+          "faker": "address.streetAddress"
+        },
+        "city": {
+          "type": "string",
+          "faker": "address.city"
+        },
+        "country": {
+          "type": "string",
+          "faker": "address.country"
+        }
+      },
+      "required": [
+        "street",
+        "city",
+        "country"
+      ],
+      "additionalProperties": false
+    }
+  }
 }

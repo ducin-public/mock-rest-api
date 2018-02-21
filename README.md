@@ -37,6 +37,10 @@ instead of using default `db.json`, provide another database input file:
 
 (`json-server` will create an empty JSON db, if there's no file under a given path)
 
+## TypeScript `.d.ts` files
+
+In the `typedef/` directory you will find TypeScript definition files, which are automatically generated from JSON Schema. Use them in your TypeScript source.
+
 ## develop
 
 You can customize your `mock-rest-api`
@@ -69,6 +73,10 @@ or this:
 
         Home
         http://localhost:3000
+
+Re-generate TypeScript definition files:
+
+    npm run typedef
 
 Important:
 

@@ -10,7 +10,7 @@
       "faker": "finance.amount"
     },
     "currency": {
-      "enum": ["PLN", "GBP", "USD", "EUR"]
+      "$ref": "#/definitions/Currency"
     },
     "sourceAccount": {
       "type": "string",
@@ -33,9 +33,11 @@
       "faker": "lorem.sentence"
     },
     "scheduledAt": {
+      "type": "string",
       "faker": "date.past"
     },
     "executeAt": {
+      "type": "string",
       "faker": "date.future"
     }
   },
@@ -50,5 +52,10 @@
     "scheduledAt",
     "executeAt"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "Currency": {
+      "enum": ["PLN", "GBP", "USD", "EUR"]
+    }
+  }
 }

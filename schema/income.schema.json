@@ -19,6 +19,7 @@
       "faker": "company.bs"
     },
     "createdAt": {
+      "type": "string",
       "faker": "date.past"
     },
     "createdBy": {

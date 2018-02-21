@@ -1,18 +1,18 @@
-var jsonServer = require('json-server');
-var pause = require('connect-pause');
-var path = require('path');
+var jsonServer = require('json-server')
+var pause = require('connect-pause')
+var path = require('path')
 
 module.exports = function run(opts){
-  var server = jsonServer.create();
+  var server = jsonServer.create()
   var middlewares = jsonServer.defaults({
     static: path.join(__dirname, 'node_modules/json-server/lib/server/public/')
-  });
+  })
 
-  const routes = require('./routes.json')
-  const rewriter = jsonServer.rewriter(routes)
+  var routes = require('./routes.json')
+  var rewriter = jsonServer.rewriter(routes)
   server.use(rewriter)
 
-  var router = jsonServer.router(path.join(__dirname, opts.dbFile));
+  var router = jsonServer.router(path.join(__dirname, opts.dbFile))
 
   server.use((req, res, next) => {
     if (req.query.limit) {
@@ -22,13 +22,13 @@ module.exports = function run(opts){
     next()
   })
 
-  server.use(pause(opts.delayMS));
-  server.use(middlewares);
-  server.use(router);
+  server.use(pause(opts.delayMS))
+  server.use(middlewares)
+  server.use(router)
 
   server.listen(opts.port, function () {
-    console.log('JSON Server is running');
-    console.log('config: ', JSON.stringify(opts, null, 2));
-    console.log('open http://localhost:' + opts.port);
-  });
+    console.log('JSON Server is running')
+    console.log('config: ', JSON.stringify(opts, null, 2))
+    console.log('open http://localhost:' + opts.port)
+  })
 }
