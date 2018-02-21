@@ -15,6 +15,28 @@ and execute:
 
 as simple as that
 
+## options
+
+### port
+
+change the `json-server` port
+
+    mock-rest-api -p 3001
+
+### delay
+
+set the delay for each request:
+
+    mock-rest-api -d 2500
+
+### file
+
+instead of using default `db.json`, provide another database input file:
+
+    mock-rest-api -f alternative-db.json
+
+(`json-server` will create an empty JSON db, if there's no file under a given path)
+
 ## develop
 
 You can customize your `mock-rest-api`
@@ -26,6 +48,10 @@ fetch dependencies:
 start REST API in your console:
 
     npm start
+    npm start -- -p 3001
+    npm start -- -d 2500
+    npm start -- -f alternative-db.json
+    # override whatever params you wish
 
 you should see something similar to this:
 
