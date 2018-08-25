@@ -3,6 +3,12 @@
 This repository holds a simple mock REST API that might be used for rapid SPA development.
 Especially, when there's no need to focus on the API itself - this one comes for free :)
 
+## early extended version
+
+run the mock API:
+
+    npm run mock-api
+
 ## run
 
 install globally:

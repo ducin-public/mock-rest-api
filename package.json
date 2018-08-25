@@ -1,16 +1,16 @@
 {
   "name": "mock-rest-api",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "mocked RESTful API used for SPAs development",
   "main": "run.js",
   "bin": "./bin/index.js",
   "scripts": {
     "start": "node ./bin/index.js",
+    "mock-api": "json-server db-mock.json -d 1000",
     "generate": "node generate.js",
     "typedef": "node typedef.js"
   },
   "author": "Tomasz Ducin <tomasz@ducin.it>",
-  "license": "MIT",
   "keywords": [
     "mock",
     "api",
